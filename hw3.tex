@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage[labelfont=bf]{caption}
+\usepackage[left=0.75in, top=1in, right=0.75in, bottom=1in]{geometry}
+\pagestyle{plain}
+\begin{document}
+\rhead{Aaron Okano, Anatoly Torchinsky, Samuel Huang, Justin Maple \\ 
+      ECS 132: Homework 3}
+\thispagestyle{fancy}
+
+% Let the homework begin!
+\section*{Problem 1} 
+
+\section*{Problem 2}
+
+$P( X > 3.0 )$ can be easily derived by integrating the density function over
+all $X > 3.0$.
+\begin{align*}
+  P( X > 3.0 ) &= \int\limits_{3}^{\inf} \frac{1}{t} dt \\
+               &= -\frac{1}{t} \\
+\end{align*}
+
+\section*{Problem 3}
+
+There were two steps involved in proving $Cov(V) = c^{2}(A'A)^{-1}$.
+
+First, simplify $V$:
+
+\begin{align*}
+  V &= (A'A)^{-1}A'U \\
+    &= A^{-1}A'^{-1}A'U \\
+    &= A^{-1}U
+\end{align*}
+
+Next, plug the simplified $V$ into the $Cov(V)$ formula:
+
+\begin{align*}
+  Cov(V) &= Cov(A^{-1}U) \\
+         &= A^{-1}Cov(U)A'^{-1} \\
+         &= A^{-1}(c^{2}I)A'^{-1} \\
+         &= c^{2}A^{-1}IA'^{-1} \\
+         &= c^{2}A^{-1}A'^{-1} \\
+         &= c^{2}(A'A)^{-1}
+\end{align*}
+
+\end{document}
