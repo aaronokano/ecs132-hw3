@@ -22,7 +22,7 @@ a new random variable $Z = \frac{L - \mu}{\sigma}$. The probability $P( L > 12
 )$ can now be expressed as $P( Z > \frac{12 - 0}{\sigma} )$. We can use the R
 function qnorm to find the value $c$ for which $P( Z < c ) = 1 - p$ where $p$
 is 2.5\%, as given in the problem. Thus, calling \texttt{qnorm( 1 - 0.025 )}
-gives us 1.44 as the value for $c$ and solving for $\sigma$ in the equation $c
+gives us 1.96 as the value for $c$ and solving for $\sigma$ in the equation $c
 = \frac{12}{\sigma}$ yields $\sigma \approx 6.123$. We can now plug this value
 into \verb pnorm()  to find $P( L > 12 )$ when $\sigma$ increases by 10\%:
 \begin{verbatim}
